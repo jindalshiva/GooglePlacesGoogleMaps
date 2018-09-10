@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/relative_Layout">
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"/>
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:id="@+id/layout_search"
+            android:hint="Enter Adddress, city, pin"
+            android:imeOptions="actionSearch"
+
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/relative_Layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_gps"
+        android:src="@drawable/ic_gps"/>
+
+
+</RelativeLayout>
